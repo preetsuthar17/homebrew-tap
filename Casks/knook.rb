@@ -19,8 +19,7 @@ cask "knook" do
   caveats do
     <<~EOS
       This preview build is not notarized yet.
-      Install with `brew install --cask --no-quarantine knook` for the smoothest preview flow.
-      If you already installed it and macOS says knook is damaged, run:
+      If macOS says knook is damaged on first launch, run:
         xattr -dr com.apple.quarantine /Applications/knook.app
     EOS
   end
