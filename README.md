@@ -6,17 +6,16 @@ Homebrew tap for preview builds of `knook`.
 
 ```bash
 brew tap preetsuthar17/tap
-brew install --cask knook
+brew install --cask --no-quarantine knook
 ```
 
 ## First Launch
 
 Current preview builds are unsigned and not notarized yet.
 
-If macOS blocks the first launch:
+If you already installed with quarantine enabled and macOS says `knook` is damaged:
 
-1. Open Finder.
-2. Go to `/Applications`.
-3. Right-click `knook.app`.
-4. Choose `Open`.
-5. Confirm the prompt once.
+```bash
+xattr -dr com.apple.quarantine /Applications/knook.app
+open /Applications/knook.app
+```
